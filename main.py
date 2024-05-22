@@ -1,7 +1,7 @@
 while True:
         
-    x = str(input('informe o primeiro numero')).replace(',','.')
-    y = str(input('informe o segundo numero')).replace(',','.')
+    x = str(input('informe o primeiro numero: ')).replace(',','.')
+    y = str(input('informe o segundo numero: ')).replace(',','.')
 
     x = float(x)
     y = float(y)
@@ -14,18 +14,27 @@ while True:
     print('"%" para encontrar o resto da divisão.')
     
 
-    op = input('operação desejada. ')
+    op = input('operação desejada: ')
 
     match op:
         case '+':
-            print(f'A soma é: (x + y).')
+            print(f'A soma é: {x + y}.')
         case '-':
-            print(f'A subtração é: (x + y).')
+            print(f'A subtração é: {x - y}.')
         case '*':
-            print(f'A multiplicação é: (x + y).')
+            print(f'A multiplicação é: {x * y}.')
         case '/':
-            print(f'A divisão é: (x + y).')
+            print(f'A divisão é: {x / y}.')
         case '%':
-            print(f'O resto da divisão é: (x + y).')
+            print(f'O resto da divisão é: {x % y}.')
         case '_':
-            print(f'Operação inválida: (x + y).')
+            print(f'Operação inválida. ')
+            continue
+    continuar = input('deseja continuar (s/n)? ')
+    if continuar == 's':
+        continue
+    elif continuar == 'n':
+        break
+    else:
+        print('opção invalivada.')
+        continue
